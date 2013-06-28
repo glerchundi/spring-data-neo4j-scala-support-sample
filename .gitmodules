@@ -1,0 +1,3 @@
+[submodule "spring-data-neo4j-scala-support"]
+	path = spring-data-neo4j-scala-support
+	url = https://github.com/glerchundi/spring-data-neo4j-scala-support.git
