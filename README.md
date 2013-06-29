@@ -13,7 +13,9 @@ case class User @PersistenceConstructor() (
     username: String = "",
     
     firstName: String = "",
-    lastName: Option[String] = None)
+    lastName: Option[String] = None,
+    
+    roles: List[String] = List())
   extends Neo4jIdentifiableEntity[Int] {
 
   // SDN needs no-arg constructor (waiting for @PersistenceConstructor!!!)
@@ -25,7 +27,7 @@ case class User @PersistenceConstructor() (
 Persist:
 
 ```scala
-  val user = User(Some(1), "glerchundi", "Gorka", Some("Lerchundi"))
+  val user = User(Some(1), "glerchundi", "Gorka", Some("Lerchundi"), List("ROLE_ADMIN"))
   userRepository.save(user)      
 ```
 
